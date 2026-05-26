@@ -1,0 +1,13 @@
+[package]
+name = "superchess-rs"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cozy-chess = { version = "0.3", features = ["pext"] }
+arrayvec = "0.7"
+
+[profile.release]
+lto = "fat"
+codegen-units = 1
+panic = "abort"
